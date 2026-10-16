@@ -138,8 +138,8 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2rem,4.2vw,2.8re
 .cita--teal{background:var(--teal-claro)}
 .cita--teal::before{background:var(--teal)}
 .cita .latin{font-size:1.05rem;color:var(--tinta-2);margin:0 0 .7rem}
-.estudio{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.2rem 3rem}
-@media (max-width:820px){.estudio{grid-template-columns:minmax(0,1fr)}}
+.estudio,.vida--dos{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.2rem 3rem}
+@media (max-width:820px){.estudio,.vida--dos{grid-template-columns:minmax(0,1fr)}}
 
 /* Aviso */
 .aviso{margin-top:3rem;display:flex;gap:1rem;align-items:flex-start;background:var(--blanco);border:1px solid var(--linea);border-radius:8px;padding:1.2rem 1.4rem;max-width:44rem}
@@ -263,7 +263,7 @@ textarea{min-height:9rem;resize:vertical}
           <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 35V17"/><path d="M20 21c-7 0-11-5-11-11 7 0 11 5 11 11z"/><path d="M20 25c6 0 10-4 10-10-6 0-10 4-10 10z"/><path d="M10 35h20"/></svg>
           <span class="lat">Creatio</span>
           <h3>Cerca de la creación</h3>
-          <p>Cultivamos en ecológico porque la tierra no es nuestra. La cuidamos con respeto y queremos dejarla mejor para quienes vengan detrás.</p>
+          <p>Cultivamos en ecológico y cuidamos de nuestros animales porque la tierra no es nuestra. La cuidamos con respeto y queremos dejarla mejor para quienes vengan detrás.</p>
         </article>
         <article class="pilar p-communitas">
           <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="12" r="4"/><circle cx="27" cy="12" r="4"/><circle cx="20" cy="17" r="4"/><path d="M5 33c0-6 4-10 8-10M35 33c0-6-4-10-8-10"/><path d="M11 34c0-6 4-9 9-9s9 3 9 9"/></svg>
@@ -325,7 +325,11 @@ textarea{min-height:9rem;resize:vertical}
         <p class="etiqueta">La vida aquí</p>
         <h2 id="h-vida">Así pasan los días en la granja</h2>
       </div>
-      <div class="vida">
+      <div class="vida vida--dos">
+        <article style="--c:var(--teal);--c-claro:var(--teal-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22a5 5 0 0 1 4-7 6 6 0 0 1 11-1 5 5 0 0 1 5 7 4.5 4.5 0 0 1-4 6H13a5 5 0 0 1-5-5z"/><path d="M28 17c2-1 5-1 6 1s0 5-3 5"/><path d="M13 27v6M23 27v6"/></svg></div>
+          <div><h3>Los animales</h3><p>Son grandes protagonistas de la granja. Cada día empieza y termina con ellos: darles de comer y de beber, limpiar, curar y estar atentos a cada uno. Nos enseñan constancia y nos recuerdan que cuidar es una forma de querer.</p></div>
+        </article>
         <article style="--c:var(--oliva);--c-claro:var(--oliva-claro)">
           <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 32h32"/><path d="M12 32V18M12 18c-4 0-6-3-6-6 4 0 6 3 6 6zM12 22c4 0 6-3 6-6-4 0-6 3-6 6z"/><path d="M28 32V20M28 20c-4 0-5-3-5-5 3 0 5 2 5 5zM28 24c3 0 5-2 5-5-3 0-5 2-5 5z"/></svg></div>
           <div><h3>El huerto ecológico</h3><p>Cultivamos verduras de temporada sin prisas, con cuidado y siguiendo lo que pide cada estación.</p></div>
