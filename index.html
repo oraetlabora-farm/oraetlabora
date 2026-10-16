@@ -347,9 +347,11 @@ textarea{min-height:9rem;resize:vertical}
 <script>
 /* Dirección del script de Google que recibe el formulario y lo reenvía al correo de la granja.
    Script de Google Apps Script en la cuenta de Workspace de la granja. */
+var CLAVE_FORMULARIO = "oel-web-2026"; /* la misma que en el script */
 var ENDPOINT = "https://script.google.com/macros/s/AKfycbzTwrVB8qRJ1dzq8oqzQkfqGPV021IiWjz0qgPRBPyo4OJx8NtSV54UN09LIrjjsSDJ/exec";
 
 (function(){
+  var abierto=Date.now();
   var form=document.getElementById('form-contacto');
   var estado=document.getElementById('f-estado');
   var btn=document.getElementById('f-enviar');
@@ -360,7 +362,9 @@ var ENDPOINT = "https://script.google.com/macros/s/AKfycbzTwrVB8qRJ1dzq8oqzQkfqG
       nombre:form.nombre.value.trim(),
       email:form.email.value.trim(),
       mensaje:form.mensaje.value.trim(),
-      web:form.web.value
+      web:form.web.value,
+      k:CLAVE_FORMULARIO,
+      t:Date.now()-abierto
     };
     if(!d.nombre||!d.email||!d.mensaje){aviso('Rellena tu nombre, tu correo y el mensaje.','error');return;}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)){aviso('Revisa tu correo: parece que falta algo.','error');form.email.focus();return;}
