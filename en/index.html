@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ora et Labora</title>
+<meta name="description" content="Ora et Labora, an organic farm in Castile. A life closer to reality, close to creation, in community and with time for God.">
+<link rel="preload" href="../fuentes/alegreya-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fuentes/alegreya-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="https://oraetlabora.farm/en/">
+<link rel="alternate" hreflang="es" href="https://oraetlabora.farm/">
+<link rel="alternate" hreflang="en" href="https://oraetlabora.farm/en/">
+<link rel="alternate" hreflang="x-default" href="https://oraetlabora.farm/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Ora et Labora">
+<meta property="og:title" content="Ora et Labora · Organic farm in Castile">
+<meta property="og:description" content="A small farm where we try to live with our feet on the ground, close to creation, in community and with time for God.">
+<meta property="og:url" content="https://oraetlabora.farm/en/">
+<meta property="og:image" content="https://oraetlabora.farm/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<style>
+/* Layout: página clara y luminosa con los colores del logotipo. Logo grande en la portada, colinas de cultivos como transición, cuatro pilares en los cuatro colores del logo, formulario sobre fondo de campo verde claro. Diseño solo claro, a juego con el logo sobre blanco. */
+/* Tipografías alojadas en la propia web: sin conexiones a terceros */
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:500;font-display:swap;src:url(../fuentes/alegreya-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:700;font-display:swap;src:url(../fuentes/alegreya-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Alegreya';font-style:italic;font-weight:500;font-display:swap;src:url(../fuentes/alegreya-latin-500-italic.woff2) format('woff2')}
+@font-face{font-family:'Alegreya SC';font-style:normal;font-weight:500;font-display:swap;src:url(../fuentes/alegreya-sc-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Alegreya SC';font-style:normal;font-weight:700;font-display:swap;src:url(../fuentes/alegreya-sc-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:400;font-display:swap;src:url(../fuentes/alegreya-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:500;font-display:swap;src:url(../fuentes/alegreya-sans-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url(../fuentes/alegreya-sans-latin-700-normal.woff2) format('woff2')}
+:root{
+  color-scheme:light;
+  --blanco:#FFFFFF;
+  --papel:#F8F9F2;
+  --tinta:#33261A;      /* marrón del contorno del logo */
+  --tinta-2:#6B5C49;
+  --linea:#E4E4D8;
+  --teal:#2C7776;       /* "ORA ET" */
+  --teal-claro:#E4F1EF;
+  --oliva:#6A8235;      /* "LABORA" */
+  --oliva-logo:#8A9E4D;
+  --oliva-claro:#EEF3E1;
+  --verde:#68813F;
+  --verde-2:#7E9747;
+  --rojo:#B23E3B;       /* granero */
+  --rojo-claro:#FAE8E4;
+  --oro:#E2BC49;        /* trigo */
+  --oro-2:#C9A43A;
+  --oro-claro:#FBF3D8;
+  --madera:#B98450;
+  --f-display:"Alegreya", "Iowan Old Style", Georgia, serif;
+  --f-sc:"Alegreya SC", "Alegreya", Georgia, serif;
+  --f-body:"Alegreya Sans", "Gill Sans", "Segoe UI", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--blanco)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--blanco);color:var(--tinta);font-family:var(--f-body);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+
+.gutter{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:68rem;margin:0 auto}
+
+/* Cabecera */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:21;background:var(--blanco)}
+.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.55rem}
+.top .logo{display:block;height:52px;width:auto}
+.nav{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:flex-end}
+.nav a{font-size:1rem;font-weight:500;text-decoration:none;color:var(--tinta-2);padding-block:.2rem;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--teal);border-bottom-color:var(--oro)}
+@media (max-width:640px){.nav{display:none}}
+.cab-der{display:flex;align-items:center;gap:1.6rem}
+.idiomas{display:flex;align-items:center;gap:.35rem;font-size:.95rem;font-weight:700;letter-spacing:.06em;color:var(--linea);white-space:nowrap}
+.idiomas a{text-decoration:none;color:var(--tinta-2);padding:.2rem .15rem;border-bottom:2px solid transparent}
+.idiomas a:hover{color:var(--teal)}
+.idiomas a[aria-current]{color:var(--teal);border-bottom-color:var(--oro)}
+
+/* Portada */
+.portada .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:2.5rem 4rem;padding-block:clamp(2.5rem,7vw,5rem) clamp(1.5rem,4vw,2.5rem)}
+.portada .logo-grande{width:100%;max-width:30rem;height:auto;display:block;justify-self:center}
+.eyebrow{font-family:var(--f-sc);font-weight:700;color:var(--oliva);letter-spacing:.12em;font-size:1rem;margin:0 0 .6rem}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2.6rem,6.4vw,4.4rem);line-height:1.02;margin:0 0 1.1rem;color:var(--teal);text-wrap:balance;letter-spacing:-.01em}
+h1 em{font-style:italic;font-weight:500;color:var(--oliva)}
+.lema{font-family:var(--f-display);font-weight:500;font-size:clamp(1.2rem,2.2vw,1.45rem);line-height:1.5;margin:0;color:var(--tinta);max-width:32rem;text-wrap:pretty}
+@media (max-width:820px){
+  .portada .wrap{grid-template-columns:minmax(0,1fr)}
+  .portada .logo-grande{max-width:24rem}
+}
+
+/* Colinas */
+.colinas{display:block;width:100%;height:auto;max-width:100%}
+
+/* Secciones */
+section{scroll-margin-top:5rem}
+.banda{padding-block:clamp(3.5rem,8vw,5.5rem)}
+.banda--papel{background:var(--papel)}
+.cab{max-width:40rem;margin-bottom:2.2rem}
+.etiqueta{font-family:var(--f-sc);font-weight:700;letter-spacing:.12em;font-size:.95rem;margin:0 0 .3rem;color:var(--rojo)}
+h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2rem,4.2vw,2.8rem);line-height:1.1;margin:0;color:var(--teal);text-wrap:balance}
+.texto{max-width:38rem}
+.texto p{margin:0 0 1.05rem}
+.texto p:last-child{margin-bottom:0}
+.capital::first-letter{font-family:var(--f-display);font-weight:700;color:var(--rojo);float:left;font-size:3.7em;line-height:.8;padding:.08em .1em 0 0}
+
+/* Por qué: texto + cita */
+.porque{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2.5rem 4rem;align-items:start}
+.cita{margin:0;background:var(--oro-claro);border-radius:6px;padding:1.6rem 1.7rem 1.5rem;position:relative}
+.cita::before{content:"";position:absolute;left:0;top:1.6rem;bottom:1.6rem;width:4px;background:var(--oro);border-radius:0 3px 3px 0}
+.cita p{font-family:var(--f-display);font-style:italic;font-weight:500;font-size:1.45rem;line-height:1.35;margin:0 0 .7rem;color:var(--tinta)}
+.cita footer{font-size:.95rem;color:var(--tinta-2)}
+@media (max-width:820px){.porque{grid-template-columns:minmax(0,1fr)}}
+
+/* Pilares */
+.pilares{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem}
+@media (max-width:980px){.pilares{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.pilares{grid-template-columns:minmax(0,1fr)}}
+.pilar{min-width:0;border-radius:8px;padding:1.5rem 1.4rem 1.6rem;background:var(--c-claro);border-top:5px solid var(--c)}
+.pilar svg{width:2.6rem;height:2.6rem;color:var(--c);display:block;margin-bottom:.9rem}
+.pilar .lat{font-family:var(--f-sc);font-weight:700;color:var(--c-texto,var(--c));letter-spacing:.12em;font-size:.9rem;display:block}
+.pilar h3{font-family:var(--f-display);font-weight:700;font-size:1.35rem;line-height:1.2;margin:.15rem 0 .5rem;color:var(--tinta)}
+.pilar p{margin:0;color:var(--tinta-2);font-size:1.05rem}
+.p-terra{--c:var(--rojo);--c-claro:var(--rojo-claro)}
+.p-creatio{--c:var(--oliva-logo);--c-texto:var(--oliva);--c-claro:var(--oliva-claro)}
+.p-communitas{--c:var(--oro);--c-texto:#9A7A1C;--c-claro:var(--oro-claro)}
+.p-oratio{--c:var(--teal);--c-claro:var(--teal-claro)}
+
+/* Vida en la granja */
+.vida{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem 2.5rem}
+@media (max-width:820px){.vida{grid-template-columns:minmax(0,1fr)}}
+.vida article{min-width:0;display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:1rem;align-items:start}
+.vida .ico{width:3.2rem;height:3.2rem;border-radius:50%;display:grid;place-items:center;background:var(--c-claro);color:var(--c)}
+.vida .ico svg{width:1.8rem;height:1.8rem}
+.vida h3{font-family:var(--f-display);font-weight:700;font-size:1.3rem;margin:.2rem 0 .3rem;line-height:1.2}
+.vida p{margin:0;color:var(--tinta-2)}
+.vida p + p{margin-top:.6rem}
+
+/* Estudio */
+.estudio-intro{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2.5rem 4rem;align-items:start;margin-bottom:3rem}
+@media (max-width:820px){.estudio-intro{grid-template-columns:minmax(0,1fr)}}
+.cita--teal{background:var(--teal-claro)}
+.cita--teal::before{background:var(--teal)}
+.cita .latin{font-size:1.05rem;color:var(--tinta-2);margin:0 0 .7rem}
+.estudio,.vida--dos{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.2rem 3rem}
+@media (max-width:820px){.estudio,.vida--dos{grid-template-columns:minmax(0,1fr)}}
+
+/* Fotos en Instagram */
+.fotos{margin-top:3rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem 2rem;background:var(--rojo-claro);border-radius:10px;padding:1.5rem 1.7rem}
+.fotos .txt{display:flex;gap:1rem;align-items:flex-start;min-width:0;flex:1 1 20rem}
+.fotos svg{flex:0 0 auto;width:2.4rem;height:2.4rem;color:var(--rojo)}
+.fotos h3{font-family:var(--f-display);font-weight:700;font-size:1.35rem;line-height:1.2;margin:0 0 .25rem}
+.fotos p{margin:0;color:var(--tinta-2)}
+.boton{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem;color:var(--blanco);background:var(--rojo);border-radius:999px;padding:.75rem 1.4rem;text-decoration:none;white-space:nowrap}
+.boton:hover{background:#963431}
+.pie a{color:#FFFFFF}
+.pie .privacidad{flex-basis:100%;margin:0;font-size:.9rem;color:#CFE5E2}
+
+/* Aviso */
+.aviso{margin-top:3rem;display:flex;gap:1rem;align-items:flex-start;background:var(--blanco);border:1px solid var(--linea);border-radius:8px;padding:1.2rem 1.4rem;max-width:44rem}
+.aviso svg{flex:0 0 auto;width:1.6rem;height:1.6rem;color:var(--oliva);margin-top:.15rem}
+.aviso p{margin:0;font-family:var(--f-display);font-weight:500;font-size:1.15rem;line-height:1.45}
+
+/* Contacto */
+.contacto{background:var(--oliva-claro)}
+.contacto-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:2.5rem 4rem;align-items:start}
+@media (max-width:820px){.contacto-grid{grid-template-columns:minmax(0,1fr)}}
+form{background:var(--blanco);border-radius:10px;padding:clamp(1.3rem,3vw,2rem);display:grid;gap:1.1rem;box-shadow:0 1px 0 var(--linea),0 10px 30px -18px rgba(51,38,26,.35)}
+.campo{display:grid;gap:.35rem;min-width:0}
+.fila{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem}
+@media (max-width:520px){.fila{grid-template-columns:minmax(0,1fr)}}
+label{font-weight:500;font-size:.98rem}
+input,textarea{font:inherit;font-size:1.05rem;color:var(--tinta);background:var(--papel);border:1px solid var(--linea);border-radius:6px;padding:.65rem .8rem;width:100%;min-width:0}
+input:focus,textarea:focus{background:var(--blanco);border-color:var(--teal);outline:none;box-shadow:0 0 0 3px var(--teal-claro)}
+textarea{min-height:9rem;resize:vertical}
+.trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:.6rem;align-items:flex-start;font-size:.95rem;color:var(--tinta-2)}
+.consent input{width:1.1rem;height:1.1rem;margin-top:.25rem;flex:0 0 auto;accent-color:var(--teal)}
+.enviar{font:inherit;font-weight:700;font-size:1.05rem;color:var(--blanco);background:var(--teal);border:0;border-radius:999px;padding:.8rem 1.6rem;cursor:pointer;justify-self:start}
+.enviar:hover{background:#235f5e}
+.enviar[disabled]{opacity:.6;cursor:default}
+.estado{margin:0;font-size:1rem;min-height:1.4em}
+.estado.ok{color:var(--oliva);font-weight:500}
+.estado.error{color:var(--rojo);font-weight:500}
+
+/* Pie */
+.pie{background:var(--teal);color:#EAF4F2}
+.pie .wrap{padding-block:2.4rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem 2rem;font-size:.98rem}
+.pie .nombre{font-family:var(--f-sc);font-weight:700;letter-spacing:.08em;font-size:1.25rem;color:#FFFFFF}
+.pie .nombre span{color:var(--oro)}
+.pie .pax{font-family:var(--f-sc);letter-spacing:.2em;color:var(--oro)}
+</style>
+</head>
+<body>
+
+<header class="top gutter">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Ora et Labora, back to top"><img class="logo" src="../logo.svg" alt="Ora et Labora" width="97" height="52"></a>
+    <div class="cab-der">
+    <nav class="nav" aria-label="Sections">
+      <a href="#por-que">Why</a>
+      <a href="#lo-que-nos-mueve">What moves us</a>
+      <a href="#el-estudio">Study</a>
+      <a href="#la-vida">Life here</a>
+      <a href="#contacto">Write to us</a>
+    </nav>
+    <div class="idiomas" aria-label="Language"><a href="../" lang="es" hreflang="es" title="Español">ES</a><span aria-hidden="true">·</span><a href="./" lang="en" hreflang="en" aria-current="page">EN</a></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="portada gutter" aria-labelledby="titulo">
+    <div class="wrap">
+      <img class="logo-grande" src="../logo.svg" alt="Ora et Labora logo: farm fields, a barn, a sheep, a cow, a cross and a dove" width="688" height="369">
+      <div>
+        <p class="eyebrow">Organic farm in Castile</p>
+        <h1 id="titulo">Pray <em>and</em> work</h1>
+        <p class="lema">A small farm in Castile where we try to live differently: with our feet on the ground, close to creation, in community and with time for God.</p>
+      </div>
+    </div>
+  </section>
+
+  <svg class="colinas" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <clipPath id="c-verde"><path d="M0 60 C 320 0, 620 10, 900 110 L 900 170 L 0 170 Z"/></clipPath>
+      <clipPath id="c-oro"><path d="M560 170 C 820 40, 1150 10, 1440 30 L 1440 170 Z"/></clipPath>
+    </defs>
+    <rect width="1440" height="170" fill="var(--blanco)"/>
+    <path d="M560 170 C 820 40, 1150 10, 1440 30 L 1440 170 Z" fill="var(--oro)"/>
+    <g clip-path="url(#c-oro)" fill="none" stroke="var(--oro-2)" stroke-width="5">
+      <path d="M560 190 C 820 70, 1150 40, 1460 60"/>
+      <path d="M560 215 C 820 100, 1150 70, 1460 90"/>
+      <path d="M560 240 C 820 130, 1150 100, 1460 120"/>
+      <path d="M560 265 C 820 160, 1150 130, 1460 150"/>
+    </g>
+    <path d="M0 60 C 320 0, 620 10, 900 110 L 900 170 L 0 170 Z" fill="var(--verde-2)"/>
+    <g clip-path="url(#c-verde)" fill="none" stroke="var(--verde)" stroke-width="6">
+      <path d="M-20 85 C 320 25, 620 35, 920 135"/>
+      <path d="M-20 112 C 320 52, 620 62, 920 162"/>
+      <path d="M-20 139 C 320 79, 620 89, 920 189"/>
+      <path d="M-20 166 C 320 106, 620 116, 920 216"/>
+    </g>
+    <rect y="164" width="1440" height="6" fill="var(--tinta)"/>
+  </svg>
+
+  <section id="por-que" class="banda gutter" aria-labelledby="h-por-que">
+    <div class="wrap">
+      <div class="cab">
+        <p class="etiqueta">Why we exist</p>
+        <h2 id="h-por-que">The answer to a search</h2>
+      </div>
+      <div class="porque">
+        <div class="texto">
+          <p class="capital">Ora et Labora was born of a personal search. We wanted a life more rooted in reality, where the day is set by the sun, the seasons and what the land asks of us, not just by screens and hurry.</p>
+          <p>We found it in the Castilian countryside. Working the land teaches things that cannot be learned any other way. Everything takes its time. We are not in control of everything. What we receive is a gift.</p>
+           <p>The name comes from the motto that sums up the tradition of Saint Benedict: to pray and to work, without separating one from the other. That is what we want to live each day.</p>
+        </div>
+        <blockquote class="cita">
+          <p>Seeking goodness, beauty and truth in the small things of every day.</p>
+          <footer>What guides us</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="lo-que-nos-mueve" class="banda banda--papel gutter" aria-labelledby="h-mueve">
+    <div class="wrap">
+      <div class="cab">
+        <p class="etiqueta">What moves us</p>
+        <h2 id="h-mueve">Four things we seek</h2>
+      </div>
+      <div class="pilares">
+        <article class="pilar p-terra">
+          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6v20"/><path d="M14 12l6-6 6 6"/><path d="M5 30c5-3 10-3 15 0s10 3 15 0"/><path d="M5 35c5-3 10-3 15 0s10 3 15 0"/></svg>
+          <span class="lat">Terra</span>
+          <h3>A more real life</h3>
+          <p>Working with our hands, getting muddy, depending on the weather. Getting back to what is concrete and learning from it.</p>
+        </article>
+        <article class="pilar p-creatio">
+          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 35V17"/><path d="M20 21c-7 0-11-5-11-11 7 0 11 5 11 11z"/><path d="M20 25c6 0 10-4 10-10-6 0-10 4-10 10z"/><path d="M10 35h20"/></svg>
+          <span class="lat">Creatio</span>
+          <h3>Close to creation</h3>
+          <p>We farm organically and look after our animals because the land is not ours. We care for it with respect and want to leave it better for those who come after us.</p>
+        </article>
+        <article class="pilar p-communitas">
+          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="12" r="4"/><circle cx="27" cy="12" r="4"/><circle cx="20" cy="17" r="4"/><path d="M5 33c0-6 4-10 8-10M35 33c0-6-4-10-8-10"/><path d="M11 34c0-6 4-9 9-9s9 3 9 9"/></svg>
+          <span class="lat">Communio</span>
+          <h3>Building community</h3>
+          <p>A farm cannot stand on its own. We want it to be a meeting place for families and friends, where the table, the work and the celebrations are shared.</p>
+        </article>
+        <article class="pilar p-oratio">
+          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4v32"/><path d="M12 12h16"/><path d="M8 36h24"/></svg>
+          <span class="lat">Oratio</span>
+          <h3>A deeper life</h3>
+          <p>Prayer gives meaning to work, and work makes prayer more genuine. We want every day to have its time for silence and for meeting God.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="el-estudio" class="banda gutter" aria-labelledby="h-estudio">
+    <div class="wrap">
+      <div class="cab">
+        <p class="etiqueta">Studium</p>
+        <h2 id="h-estudio">Studying to understand the life we live</h2>
+      </div>
+      <div class="estudio-intro">
+        <div class="texto">
+          <p>In the Benedictine tradition, the work of the hands never stood alone. It went together with study: monasteries were schools of agriculture, keepers of history and houses of the Word.</p>
+          <p>We want to follow that path. We study with a scientific eye, observing, measuring and testing, because faith does not fear reason. Knowing creation well is another way of caring for it and giving thanks for it.</p>
+        </div>
+        <blockquote class="cita cita--teal">
+          <p>Great are the works of the Lord, studied by all who delight in them.</p>
+          <p class="latin">Magna opera Domini, exquisita in omnes voluntates eius.</p>
+          <footer>Psalm 111:2. Carved at the entrance of the Cavendish Laboratory in Cambridge.</footer>
+        </blockquote>
+      </div>
+      <div class="vida estudio">
+        <article style="--c:var(--oliva);--c-claro:var(--oliva-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="10"/><path d="M24.5 24.5L34 34"/><path d="M17 23v-8M17 15c-3 0-4.5-2-4.5-4.5 3 0 4.5 2 4.5 4.5zM17 18c3 0 4.5-2 4.5-4.5-3 0-4.5 2-4.5 4.5z"/></svg></div>
+          <div><h3>The natural and agricultural arts</h3><p>Soil, plants, animals, water and climate. We want to understand how the land we work really works, learning both from today’s agronomy and from the wisdom of the farmers of old.</p></div>
+        </article>
+        <article style="--c:var(--rojo);--c-claro:var(--rojo-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5h18M11 35h18"/><path d="M13 5c0 8 12 8 12 15s-12 7-12 15M27 5c0 8-12 8-12 15s12 7 12 15"/><path d="M16 31h8"/></svg></div>
+          <div><h3>History</h3><p>Where we come from: the history of the Castilian countryside, its villages and its faith. Knowing the past helps us understand the present and not start from scratch.</p></div>
+        </article>
+        <article style="--c:var(--teal);--c-claro:var(--teal-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12c-4-3-9-3-14-2v22c5-1 10-1 14 2 4-3 9-3 14-2V10c-5-1-10-1-14 2z"/><path d="M20 12v22"/><path d="M27 15v7M24.5 17.5h5"/></svg></div>
+          <div><h3>The Word of God</h3><p>We read and study Holy Scripture unhurriedly, guided by the Christian tradition, so that it does not stay on the page but reaches everyday life.</p></div>
+        </article>
+        <article style="--c:#A8851F;--c-claro:var(--oro-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="11" width="18" height="18" rx="3"/><rect x="16" y="16" width="8" height="8" rx="1"/><path d="M16 11V6M24 11V6M16 34v-5M24 34v-5M11 16H6M11 24H6M34 16h-5M34 24h-5"/></svg></div>
+          <div><h3>Technology</h3><p>Used well, technology frees up time and helps us care for the land better. We study tools and technologies, from mechanics to computing, to put them at the service of people and not the other way round.</p><p>We pay special attention to artificial intelligence. We see it as a fruit of the intelligence God has given us, but not as something neutral. We want to understand it in depth so as to use it wisely, without letting it take the place of our own judgement, of work well done or of real human contact.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="la-vida" class="banda banda--papel gutter" aria-labelledby="h-vida">
+    <div class="wrap">
+      <div class="cab">
+        <p class="etiqueta">Life here</p>
+        <h2 id="h-vida">How the days go by on the farm</h2>
+      </div>
+      <div class="vida vida--dos">
+        <article style="--c:var(--teal);--c-claro:var(--teal-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22a5 5 0 0 1 4-7 6 6 0 0 1 11-1 5 5 0 0 1 5 7 4.5 4.5 0 0 1-4 6H13a5 5 0 0 1-5-5z"/><path d="M28 17c2-1 5-1 6 1s0 5-3 5"/><path d="M13 27v6M23 27v6"/></svg></div>
+          <div><h3>Animals and pets</h3><p>They are the great protagonists of the farm. Every day begins and ends with them: feeding and watering them, cleaning, caring for them and keeping an eye on each one. They teach us perseverance and remind us that caring is a way of loving.</p></div>
+        </article>
+        <article style="--c:var(--oliva);--c-claro:var(--oliva-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 32h32"/><path d="M12 32V18M12 18c-4 0-6-3-6-6 4 0 6 3 6 6zM12 22c4 0 6-3 6-6-4 0-6 3-6 6z"/><path d="M28 32V20M28 20c-4 0-5-3-5-5 3 0 5 2 5 5zM28 24c3 0 5-2 5-5-3 0-5 2-5 5z"/></svg></div>
+          <div><h3>The organic vegetable garden</h3><p>We grow seasonal vegetables unhurriedly and with care, following what each season asks of us.</p></div>
+        </article>
+        <article style="--c:#A8851F;--c-claro:var(--oro-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="20" cy="20" r="6"/><path d="M20 4v5M20 31v5M4 20h5M31 20h5M8.7 8.7l3.5 3.5M27.8 27.8l3.5 3.5M8.7 31.3l3.5-3.5M27.8 12.2l3.5-3.5"/></svg></div>
+          <div><h3>The rhythm of the seasons</h3><p>Sowing, tending, waiting and harvesting. The farming year teaches us patience and gives us back a sense of time.</p></div>
+        </article>
+        <article style="--c:var(--rojo);--c-claro:var(--rojo-claro)">
+          <div class="ico"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5c4 6 8 9 8 15a8 8 0 0 1-16 0c0-4 2-6 4-9 1 3 2 4 4 5 0-4-1-7 0-11z"/><path d="M8 36l24-5M8 31l24 5"/></svg></div>
+          <div><h3>The table and the feast</h3><p>Throughout the year we gather families and friends to eat together, pray and celebrate.</p></div>
+        </article>
+      </div>
+      <div class="fotos" id="fotos">
+        <div class="txt">
+          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14a3 3 0 0 1 3-3h5l3-4h8l3 4h5a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><circle cx="20" cy="21" r="6.5"/></svg>
+          <div><h3>Day to day, in photos</h3><p>The animals, the garden, the fields and the celebrations: we share photos of the farm on Instagram.</p></div>
+        </div>
+        <a class="boton" href="https://www.instagram.com/oraetlabora.farm" target="_blank" rel="noopener">See @oraetlabora.farm <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="aviso">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.5"/></svg>
+        <p>For now we do not sell products or offer services. This website is simply to share who we are and how we live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="banda contacto gutter" aria-labelledby="h-contacto">
+    <div class="wrap contacto-grid">
+      <div class="cab" style="margin-bottom:0">
+        <p class="etiqueta">Write to us</p>
+        <h2 id="h-contacto">We would love to hear from you</h2>
+        <div class="texto" style="margin-top:1.1rem">
+          <p>If what you have read speaks to you, leave us a message. We will reply unhurriedly, the way things are done here.</p>
+        </div>
+      </div>
+      <form id="form-contacto" novalidate>
+        <div class="fila">
+          <div class="campo">
+            <label for="f-nombre">Name</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-email">Your email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="f-mensaje">Message</label>
+          <textarea id="f-mensaje" name="mensaje" required></textarea>
+        </div>
+        <div class="trampa" aria-hidden="true">
+          <label for="f-web">Do not fill in</label>
+          <input id="f-web" name="web" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <label class="consent" for="f-acepto">
+          <input id="f-acepto" name="acepto" type="checkbox" required>
+          <span>I agree that my details will only be used to reply to this message.</span>
+        </label>
+        <button class="enviar" id="f-enviar" type="submit">Send message</button>
+        <p class="estado" id="f-estado" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie gutter">
+  <div class="wrap">
+    <span class="nombre">Ora <span>et</span> Labora</span>
+    <span>Organic farm in Castile · oraetlabora.farm</span>
+    <a href="https://www.instagram.com/oraetlabora.farm" target="_blank" rel="noopener">Instagram</a>
+    <span class="pax">Pax</span>
+    <p class="privacidad">This website uses no cookies or trackers. Cookies are for breakfast.</p>
+  </div>
+</footer>
+
+<script>
+/* Dirección del script de Google que recibe el formulario y lo reenvía al correo de la granja.
+   Script de Google Apps Script en la cuenta de Workspace de la granja. */
+var CLAVE_FORMULARIO = "oel-web-2026"; /* la misma que en el script */
+var ENDPOINT = "https://script.google.com/macros/s/AKfycbzTwrVB8qRJ1dzq8oqzQkfqGPV021IiWjz0qgPRBPyo4OJx8NtSV54UN09LIrjjsSDJ/exec";
+
+(function(){
+  var abierto=Date.now();
+  var form=document.getElementById('form-contacto');
+  var estado=document.getElementById('f-estado');
+  var btn=document.getElementById('f-enviar');
+  function aviso(t,tipo){estado.textContent=t;estado.className='estado'+(tipo?' '+tipo:'');}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d={
+      nombre:form.nombre.value.trim(),
+      email:form.email.value.trim(),
+      mensaje:form.mensaje.value.trim(),
+      web:form.web.value,
+      k:CLAVE_FORMULARIO,
+      t:Date.now()-abierto
+    };
+    if(!d.nombre||!d.email||!d.mensaje){aviso('Please fill in your name, email and message.','error');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)){aviso('Please check your email address: something seems to be missing.','error');form.email.focus();return;}
+    if(!form.acepto.checked){aviso('Please tick the box so that we can reply.','error');return;}
+    if(d.web){aviso('Thank you. We have received your message.','ok');form.reset();return;}
+    if(!ENDPOINT){aviso('Preview: the form will send messages once the website is published.','ok');return;}
+    btn.disabled=true;aviso('Sending…');
+    fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
+      .then(function(){aviso('Thank you. We have received your message and will reply soon.','ok');form.reset();})
+      .catch(function(){aviso('The message could not be sent. Please check your connection and try again.','error');})
+      .then(function(){btn.disabled=false;});
+  });
+})();
+</script>
+
+</body>
+</html>

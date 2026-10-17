@@ -10,6 +10,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="https://oraetlabora.farm/">
+<link rel="alternate" hreflang="es" href="https://oraetlabora.farm/">
+<link rel="alternate" hreflang="en" href="https://oraetlabora.farm/en/">
+<link rel="alternate" hreflang="x-default" href="https://oraetlabora.farm/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Ora et Labora">
@@ -80,6 +83,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .nav a{font-size:1rem;font-weight:500;text-decoration:none;color:var(--tinta-2);padding-block:.2rem;border-bottom:2px solid transparent}
 .nav a:hover{color:var(--teal);border-bottom-color:var(--oro)}
 @media (max-width:640px){.nav{display:none}}
+.cab-der{display:flex;align-items:center;gap:1.6rem}
+.idiomas{display:flex;align-items:center;gap:.35rem;font-size:.95rem;font-weight:700;letter-spacing:.06em;color:var(--linea);white-space:nowrap}
+.idiomas a{text-decoration:none;color:var(--tinta-2);padding:.2rem .15rem;border-bottom:2px solid transparent}
+.idiomas a:hover{color:var(--teal)}
+.idiomas a[aria-current]{color:var(--teal);border-bottom-color:var(--oro)}
 
 /* Portada */
 .portada .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:center;gap:2.5rem 4rem;padding-block:clamp(2.5rem,7vw,5rem) clamp(1.5rem,4vw,2.5rem)}
@@ -200,6 +208,7 @@ textarea{min-height:9rem;resize:vertical}
 <header class="top gutter">
   <div class="wrap">
     <a href="#inicio" aria-label="Ora et Labora, ir al inicio"><img class="logo" src="logo.svg" alt="Ora et Labora" width="97" height="52"></a>
+    <div class="cab-der">
     <nav class="nav" aria-label="Secciones">
       <a href="#por-que">Por qué</a>
       <a href="#lo-que-nos-mueve">Lo que nos mueve</a>
@@ -207,6 +216,8 @@ textarea{min-height:9rem;resize:vertical}
       <a href="#la-vida">La vida aquí</a>
       <a href="#contacto">Escríbenos</a>
     </nav>
+    <div class="idiomas" aria-label="Idioma"><a href="./" lang="es" hreflang="es" aria-current="page">ES</a><span aria-hidden="true">·</span><a href="en/" lang="en" hreflang="en" title="English">EN</a></div>
+    </div>
   </div>
 </header>
 
