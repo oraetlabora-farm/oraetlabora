@@ -182,6 +182,13 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2rem,4.2vw,2.8re
 .cita--noche p{color:#FFFFFF}
 .cita--noche footer{color:#CFE5E2}
 
+/* Mosaico de fotos */
+.galeria{margin-top:3rem;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+@media (max-width:760px){.galeria{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}}
+.galeria figure{margin:0;min-width:0}
+.galeria img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:8px;background:var(--linea)}
+.galeria figcaption{font-size:.95rem;color:var(--tinta-2);margin-top:.45rem;line-height:1.35}
+
 /* Aviso */
 .aviso{margin-top:3rem;display:flex;gap:1rem;align-items:flex-start;background:var(--blanco);border:1px solid var(--linea);border-radius:8px;padding:1.2rem 1.4rem;max-width:44rem}
 .aviso svg{flex:0 0 auto;width:1.6rem;height:1.6rem;color:var(--oliva);margin-top:.15rem}
@@ -413,10 +420,18 @@ textarea{min-height:9rem;resize:vertical}
           <div><h3>The workshop</h3><p>In the workshop we mend what breaks and make with our own hands what the farm needs. Carpentry and blacksmithing have a special place: working with wood and iron calls for patience, precision and respect for the material. And it reminds us that Jesus spent much of his life in a carpenter’s workshop, beside Saint Joseph.</p></div>
         </article>
       </div>
+      <div class="galeria">
+        <figure><img src="../fotos/armonia-480.webp" srcset="../fotos/armonia-480.webp 480w, ../fotos/armonia-900.webp 900w" sizes="(max-width:760px) 50vw, 360px" width="900" height="900" loading="lazy" decoding="async" alt="Goats standing on a large ruminant lying down, next to a sheep"><figcaption>The little ones on top of the big ones</figcaption></figure>
+        <figure><img src="../fotos/buey-burro-480.webp" srcset="../fotos/buey-burro-480.webp 480w, ../fotos/buey-burro-900.webp 900w" sizes="(max-width:760px) 50vw, 360px" width="900" height="900" loading="lazy" decoding="async" alt="A child giving straw to the ox and the donkey"><figcaption>The ox and the donkey at feeding time</figcaption></figure>
+        <figure><img src="../fotos/cerdo-480.webp" srcset="../fotos/cerdo-480.webp 480w, ../fotos/cerdo-900.webp 900w" sizes="(max-width:760px) 50vw, 360px" width="900" height="900" loading="lazy" decoding="async" alt="A pig peeking over the half door of its sty"><figcaption>A curious neighbour</figcaption></figure>
+        <figure><img src="../fotos/huevos-480.webp" srcset="../fotos/huevos-480.webp 480w, ../fotos/huevos-900.webp 900w" sizes="(max-width:760px) 50vw, 360px" width="900" height="900" loading="lazy" decoding="async" alt="Eggs in a hen-shaped wire basket and courgettes from the garden"><figcaption>Today’s eggs and courgettes</figcaption></figure>
+        <figure><img src="../fotos/campana-480.webp" srcset="../fotos/campana-480.webp 480w, ../fotos/campana-900.webp 900w" sizes="(max-width:760px) 50vw, 360px" width="900" height="900" loading="lazy" decoding="async" alt="A bell mounted on a wooden yoke with iron fittings"><figcaption>From the workshop: wood and iron for a bell</figcaption></figure>
+        <figure><img src="../fotos/paseo-burro-480.webp" srcset="../fotos/paseo-burro-480.webp 480w, ../fotos/paseo-burro-900.webp 900w" sizes="(max-width:760px) 50vw, 360px" width="900" height="900" loading="lazy" decoding="async" alt="Children riding the donkey across a stubble field, with adults walking alongside"><figcaption>Donkey rides for the youngest</figcaption></figure>
+      </div>
       <div class="fotos" id="fotos">
         <div class="txt">
           <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14a3 3 0 0 1 3-3h5l3-4h8l3 4h5a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><circle cx="20" cy="21" r="6.5"/></svg>
-          <div><h3>Day to day, in photos</h3><p>The animals, the garden, the fields and the celebrations: we share photos of the farm on Instagram.</p></div>
+          <div><h3>More photos of everyday life</h3><p>The animals, the garden, the fields and the celebrations: we keep sharing photos of the farm on Instagram.</p></div>
         </div>
         <a class="boton" href="https://www.instagram.com/oraetlabora.farm" target="_blank" rel="noopener">See @oraetlabora.farm <span aria-hidden="true">→</span></a>
       </div>
