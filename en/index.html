@@ -169,6 +169,19 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(2rem,4.2vw,2.8re
 .pie a{color:#FFFFFF}
 .pie .privacidad{flex-basis:100%;margin:0;font-size:.9rem;color:#CFE5E2}
 
+/* Harmonia: banda de fondo, la nota sobre la que suenan las demás */
+.armonia{background:var(--teal);color:#EAF4F2}
+.armonia .etiqueta{color:var(--oro)}
+.armonia h2{color:#FFFFFF}
+.armonia .texto p{color:#E1EFEC}
+.armonia-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2.5rem 4rem;align-items:center}
+@media (max-width:820px){.armonia-grid{grid-template-columns:minmax(0,1fr)}}
+.pentagrama{display:block;width:100%;max-width:16rem;height:auto;margin:.9rem 0 0;color:var(--oro)}
+.cita--noche{background:rgba(255,255,255,.08)}
+.cita--noche::before{background:var(--oro)}
+.cita--noche p{color:#FFFFFF}
+.cita--noche footer{color:#CFE5E2}
+
 /* Aviso */
 .aviso{margin-top:3rem;display:flex;gap:1rem;align-items:flex-start;background:var(--blanco);border:1px solid var(--linea);border-radius:8px;padding:1.2rem 1.4rem;max-width:44rem}
 .aviso svg{flex:0 0 auto;width:1.6rem;height:1.6rem;color:var(--oliva);margin-top:.15rem}
@@ -274,6 +287,26 @@ textarea{min-height:9rem;resize:vertical}
           <footer>What guides us</footer>
         </blockquote>
       </div>
+    </div>
+  </section>
+
+  <section id="armonia" class="banda armonia gutter" aria-labelledby="h-armonia">
+    <div class="wrap armonia-grid">
+      <div>
+        <div class="cab" style="margin-bottom:1.4rem">
+          <p class="etiqueta">Harmonia</p>
+          <h2 id="h-armonia">The ground note</h2>
+          <svg class="pentagrama" viewBox="0 0 260 34" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 3h260M0 10h260M0 17h260M0 24h260M0 31h260"/><g fill="currentColor" stroke="none"><ellipse cx="40" cy="27.5" rx="4.6" ry="3.4" transform="rotate(-20 40 27.5)"/><ellipse cx="95" cy="20.5" rx="4.6" ry="3.4" transform="rotate(-20 95 20.5)"/><ellipse cx="150" cy="13.5" rx="4.6" ry="3.4" transform="rotate(-20 150 13.5)"/><ellipse cx="205" cy="6.5" rx="4.6" ry="3.4" transform="rotate(-20 205 6.5)"/></g></svg>
+        </div>
+        <div class="texto">
+          <p>Visitors are often struck by how well the animals get on here: the dogs with the cats, the cats with the chicks, the donkey with the ox. Each has its place, its care and its time, and they live together in peace.</p>
+          <p>That harmony is like the ground note of the farm, the one that holds up every other melody: work, study, the table and prayer. For us it is also a reflection of creation as it came from the hands of God, when everything “was very good”, and a foretaste of the peace the prophets announce.</p>
+        </div>
+      </div>
+      <blockquote class="cita cita--noche">
+        <p>The wolf shall dwell with the lamb, the leopard shall lie down with the kid, and a little child shall lead them.</p>
+        <footer>Isaiah 11:6</footer>
+      </blockquote>
     </div>
   </section>
 
