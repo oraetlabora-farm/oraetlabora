@@ -38,7 +38,7 @@ img{max-width:100%}
   color-scheme:light;
   --blanco:#FFFFFF;--papel:#F8F9F2;--tinta:#33261A;--tinta-2:#6B5C49;--linea:#E4E4D8;
   --teal:#2C7776;--teal-claro:#E4F1EF;--oliva:#6A8235;--oliva-claro:#EEF3E1;
-  --rojo:#B23E3B;--rojo-claro:#FAE8E4;--oro:#E2BC49;--oro-texto:#8F6E12;--oro-claro:#FBF3D8;
+  --sabio:#5F884B;--sabio-osc:#4C7039;--crema:#F6F5EA;--rojo:#B23E3B;--rojo-claro:#FAE8E4;--oro:#E2BC49;--oro-texto:#8F6E12;--oro-claro:#FBF3D8;
   --f-display:"Alegreya","Iowan Old Style",Georgia,serif;
   --f-sc:"Alegreya SC","Alegreya",Georgia,serif;
   --f-body:"Alegreya Sans","Gill Sans","Segoe UI",system-ui,sans-serif;
@@ -63,25 +63,24 @@ a:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
 .idiomas a:hover{color:var(--teal)}
 .idiomas a[aria-current]{color:var(--teal);border-bottom-color:var(--oro)}
 
-/* Portada */
-.portada .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:2rem 3.5rem;padding-block:clamp(2.2rem,6vw,4rem)}
-.portada figure{margin:0;min-width:0}
-.portada img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:var(--linea)}
-.eyebrow{font-family:var(--f-sc);font-weight:700;color:var(--oliva);letter-spacing:.12em;font-size:1rem;margin:0 0 .6rem}
-h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.04;margin:0 0 1rem;color:var(--teal);text-wrap:balance;letter-spacing:-.01em}
-h1 em{font-style:italic;font-weight:500;color:var(--oliva)}
-.lema{font-family:var(--f-display);font-weight:500;font-size:clamp(1.2rem,2.2vw,1.4rem);line-height:1.5;margin:0;max-width:30rem;text-wrap:pretty}
-@media (max-width:760px){
-  .portada .wrap{grid-template-columns:minmax(0,1fr)}
-  .portada figure{order:-1;max-width:26rem}
-}
-
+/* Portada: cuadro con la foto de fondo, al estilo de la web del movimiento */
+.portada{padding-block:clamp(1.2rem,4vw,2.2rem)}
+.hero{position:relative;border-radius:10px;overflow:hidden;min-height:clamp(26rem,62vw,34rem);display:flex;align-items:flex-end;background:#3a2f22}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,10,.05) 0%,rgba(20,16,10,.35) 45%,rgba(20,16,10,.78) 100%)}
+.hero-txt{position:relative;z-index:1;padding:clamp(1.4rem,4vw,2.8rem);max-width:42rem;color:#FFFFFF}
+.eyebrow{font-family:var(--f-sc);font-weight:700;color:#E9DFA8;letter-spacing:.12em;font-size:1rem;margin:0 0 .5rem}
+h1{font-family:var(--f-display);font-weight:500;font-size:clamp(2.3rem,5.6vw,3.6rem);line-height:1.06;margin:0 0 .9rem;color:#FFFFFF;text-wrap:balance;letter-spacing:-.005em}
+h1 em{font-style:italic;font-weight:500;color:#FFFFFF}
+.lema{font-family:var(--f-display);font-weight:500;font-size:clamp(1.12rem,2.1vw,1.32rem);line-height:1.5;margin:0 0 1.4rem;max-width:34rem;text-wrap:pretty;color:#F3EFE4}
 /* Bandas */
 .banda{padding-block:clamp(3rem,7vw,4.5rem)}
-.banda--papel{background:var(--papel)}
+.banda--papel{background:var(--crema)}
+.banda+.banda{border-top:1px solid var(--sabio)}
 .cab{max-width:40rem;margin-bottom:2rem}
-.etiqueta{font-family:var(--f-sc);font-weight:700;letter-spacing:.12em;font-size:.95rem;margin:0 0 .3rem;color:var(--rojo)}
-h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.1;margin:0;color:var(--teal);text-wrap:balance}
+.etiqueta{font-family:var(--f-sc);font-weight:700;letter-spacing:.12em;font-size:.95rem;margin:0 0 .3rem;color:var(--sabio)}
+h2{font-family:var(--f-display);font-weight:500;font-size:clamp(1.95rem,4vw,2.7rem);line-height:1.1;margin:0;color:var(--tinta);text-wrap:balance}
+.cab--centro{margin-inline:auto;text-align:center}
 .texto{max-width:38rem}
 .texto p{margin:0 0 1rem}
 .texto p:last-child{margin-bottom:0}
@@ -91,27 +90,22 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4vw,2.6re
 .lado{display:grid;gap:1.2rem;min-width:0}
 .logo-clm{display:block;width:100%;max-width:340px;height:auto;background:#FFFFFF;border:1px solid var(--linea);border-radius:8px;padding:.6rem .9rem}
 /* Cita */
-.cita{margin:0;background:var(--oro-claro);border-radius:6px;padding:1.6rem 1.7rem 1.5rem;position:relative}
-.cita::before{content:"";position:absolute;left:0;top:1.6rem;bottom:1.6rem;width:4px;background:var(--oro);border-radius:0 3px 3px 0}
+.cita{margin:0;background:#FFFFFF;border:1px solid var(--linea);border-radius:6px;padding:1.6rem 1.7rem 1.5rem;position:relative}
+.cita::before{content:"";position:absolute;left:0;top:1.6rem;bottom:1.6rem;width:4px;background:var(--sabio);border-radius:0 3px 3px 0}
 .cita p{font-family:var(--f-display);font-style:italic;font-weight:500;font-size:1.4rem;line-height:1.35;margin:0 0 .7rem;color:var(--tinta)}
 .cita footer{font-size:.95rem;color:var(--tinta-2)}
 
-/* Pilares */
-.intro-pilares{max-width:40rem;margin:-0.6rem 0 2rem}
+/* Pilares: tarjetas crema con foto redonda, como en la web del movimiento */
+.intro-pilares{max-width:40rem;margin:-0.6rem auto 2.2rem;text-align:center}
 .pilares{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}
 @media (max-width:700px){.pilares{grid-template-columns:minmax(0,1fr)}}
-.pilar{min-width:0;border-radius:8px;padding:1.5rem 1.5rem 1.4rem;background:var(--c-claro);border-top:5px solid var(--c);display:flex;flex-direction:column}
-.pilar svg{width:2.5rem;height:2.5rem;color:var(--c);display:block;margin-bottom:.8rem}
-.pilar .lat{font-family:var(--f-sc);font-weight:700;color:var(--c-texto,var(--c));letter-spacing:.12em;font-size:.9rem;display:block}
-.pilar h3{font-family:var(--f-display);font-weight:700;font-size:1.4rem;line-height:1.2;margin:.15rem 0 .5rem;color:var(--tinta)}
+.pilar{min-width:0;border-radius:4px;padding:1.8rem 1.5rem 1.4rem;background:var(--crema);display:flex;flex-direction:column}
+.pilar .redonda{display:block;width:9.5rem;height:9.5rem;border-radius:50%;object-fit:cover;margin:0 auto 1rem;background:var(--linea)}
+.pilar .lat{font-family:var(--f-sc);font-weight:700;color:var(--sabio);letter-spacing:.12em;font-size:.9rem;display:block;text-align:center}
+.pilar h3{font-family:var(--f-display);font-weight:500;font-size:1.5rem;line-height:1.2;margin:.1rem 0 .7rem;color:var(--tinta);text-align:center}
 .pilar p{margin:0 0 .8rem;color:var(--tinta-2);font-size:1.05rem}
-.pilar .aqui{margin-top:auto;padding-top:.8rem;border-top:1px solid rgba(51,38,26,.12);font-size:.98rem;color:var(--tinta)}
-.pilar .aqui b{font-family:var(--f-sc);font-weight:700;letter-spacing:.08em;color:var(--c-texto,var(--c))}
-.p1{--c:var(--oliva);--c-claro:var(--oliva-claro)}
-.p2{--c:var(--rojo);--c-claro:var(--rojo-claro)}
-.p3{--c:var(--teal);--c-claro:var(--teal-claro)}
-.p4{--c:var(--oro);--c-claro:var(--oro-claro);--c-texto:var(--oro-texto)}
-
+.pilar .aqui{margin-top:auto;padding-top:.8rem;border-top:1px solid rgba(95,136,75,.35);font-size:.98rem;color:var(--tinta)}
+.pilar .aqui b{font-family:var(--f-sc);font-weight:700;letter-spacing:.08em;color:var(--sabio-osc)}
 /* Fotos */
 .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem;margin-top:2.2rem}
 @media (max-width:600px){.trio{grid-template-columns:repeat(2,minmax(0,1fr))}.trio figure:last-child{display:none}}
@@ -119,13 +113,18 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4vw,2.6re
 .trio img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:8px;background:var(--linea)}
 .trio figcaption{font-size:.95rem;color:var(--tinta-2);margin-top:.4rem;line-height:1.35}
 
-/* Botones */
+/* Botones: verde del movimiento, esquinas suaves y letra con serifa */
 .acciones{display:flex;flex-wrap:wrap;gap:.8rem 1rem;margin-top:2rem}
-.boton{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem;color:var(--blanco);background:var(--teal);border-radius:999px;padding:.75rem 1.4rem;text-decoration:none}
-.boton:hover{background:#235f5e}
-.boton--claro{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
-.boton--claro:hover{background:var(--teal-claro)}
+.boton{display:inline-flex;align-items:center;font-family:var(--f-display);font-weight:500;font-size:1.08rem;letter-spacing:.01em;color:var(--blanco);background:var(--sabio);border-radius:6px;padding:.75rem 1.5rem;text-decoration:none}
+.boton:hover{background:var(--sabio-osc)}
+.boton--claro{background:transparent;color:var(--sabio-osc);box-shadow:inset 0 0 0 1.5px var(--sabio)}
+.boton--claro:hover{background:#EEF2E6}
+.hero .boton--claro{color:#FFFFFF;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8)}
+.hero .boton--claro:hover{background:rgba(255,255,255,.12)}
 
+/* Invocación final */
+.isidro{text-align:center;font-family:var(--f-display);font-style:italic;font-weight:500;font-size:clamp(1.15rem,2.2vw,1.35rem);color:var(--tinta);padding-block:2.4rem;border-top:1px solid var(--sabio);margin:0}
+.isidro span{display:block;font-family:var(--f-sc);font-style:normal;font-weight:700;letter-spacing:.14em;font-size:.85rem;color:var(--sabio);margin-bottom:.35rem}
 /* Pie */
 .pie{background:var(--teal);color:#EAF4F2}
 .pie .wrap{padding-block:2.2rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem 2rem;font-size:.98rem}
@@ -149,19 +148,18 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4vw,2.6re
 
 <main>
   <section class="portada gutter" aria-labelledby="titulo">
-    <div class="wrap">
-      <div>
+    <div class="wrap hero">
+      <img src="../fotos/atardecer-900.webp" width="900" height="900" decoding="async" alt="Caseta de madera con una cruz en el tejado y una gran cruz en el campo, al atardecer">
+      <div class="hero-txt">
         <p class="eyebrow">Una red de granjas familiares</p>
         <h1 id="titulo">Parte del <em>Catholic Land</em> Movement</h1>
         <p class="lema">OraEtLabora.farm forma parte del Catholic Land Movement, una red internacional de familias católicas que quieren volver a la tierra y vivir su fe en el campo. No caminamos solos.</p>
+        <a class="boton" href="#movimiento">Conócelo</a>
       </div>
-      <figure>
-        <img src="../fotos/atardecer-480.webp" srcset="../fotos/atardecer-480.webp 480w, ../fotos/atardecer-900.webp 900w" sizes="(max-width:760px) 92vw, 440px" width="900" height="900" decoding="async" alt="Caseta de madera con una cruz en el tejado y una gran cruz en el campo, al atardecer">
-      </figure>
     </div>
   </section>
 
-  <section class="banda banda--papel gutter" aria-labelledby="h-movimiento">
+  <section id="movimiento" class="banda banda--papel gutter" aria-labelledby="h-movimiento">
     <div class="wrap">
       <div class="cab">
         <p class="etiqueta">El movimiento</p>
@@ -185,35 +183,35 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4vw,2.6re
 
   <section class="banda gutter" aria-labelledby="h-pilares">
     <div class="wrap">
-      <div class="cab">
+      <div class="cab cab--centro">
         <p class="etiqueta">Sus cuatro pilares</p>
         <h2 id="h-pilares">Los mismos que vivimos aquí</h2>
       </div>
       <p class="intro-pilares">Cuando conocimos el movimiento, nos reconocimos en él. Sus cuatro pilares coinciden con lo que ya buscábamos en la granja.</p>
       <div class="pilares">
         <article class="pilar p1">
-          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 30c6-5 12-5 16 0s10 5 16 0"/><path d="M4 36h32"/><circle cx="27" cy="11" r="5"/><path d="M12 30V18M12 22c-3 0-5-2-5-5 3 0 5 2 5 5zM12 20c3 0 5-2 5-5-3 0-5 2-5 5z"/></svg>
+          <img class="redonda" src="../fotos/descanso-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="">
           <span class="lat">Reasentamiento</span>
           <h3>Volver al campo</h3>
           <p>El movimiento acompaña a las familias que quieren vivir en el campo, en tierra propia. Nosotros ya dimos ese paso: la granja nació de la búsqueda de una vida más pegada a la realidad, al ritmo del sol, de las estaciones y de lo que pide la tierra.</p>
           <p class="aqui"><b>En la granja · Terra y Creatio:</b> cultivamos en ecológico y cuidamos de nuestros animales, porque la tierra es obra de Dios y nosotros solo sus administradores.</p>
         </article>
         <article class="pilar p2">
-          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11c-4-3-9-4-15-3v22c6-1 11 0 15 3 4-3 9-4 15-3V8c-6-1-11 0-15 3z"/><path d="M20 11v22"/></svg>
+          <img class="redonda" src="../fotos/campana-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="">
           <span class="lat">Educación</span>
           <h3>Aprender los oficios</h3>
           <p>El movimiento forma en las habilidades del campo y del hogar: el huerto, los animales, la carpintería, las conservas y los oficios artesanos.</p>
           <p class="aqui"><b>En la granja · Studium y el taller:</b> estudiamos las artes naturales y agrarias, la historia, la Palabra de Dios y la tecnología, y en el taller trabajamos la madera y el hierro.</p>
         </article>
         <article class="pilar p3">
-          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="28" cy="12" r="4"/><path d="M5 30c0-5 3-9 7-9s7 4 7 9M21 30c0-5 3-9 7-9s7 4 7 9"/><path d="M3 34h34"/></svg>
+          <img class="redonda" src="../fotos/paseo-burro-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="">
           <span class="lat">Hermandad</span>
           <h3>No hacerlo solos</h3>
           <p>Ninguna granja se sostiene sola. El movimiento une a familias y granjas para ayudarse en lo práctico, en lo espiritual y en lo intelectual.</p>
           <p class="aqui"><b>En la granja · Communio y Harmonia:</b> reunimos a familias y amigos alrededor de la mesa y de la fiesta, y cuidamos esa armonía en la que cada uno tiene su sitio.</p>
         </article>
         <article class="pilar p4">
-          <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6v28M13 14h14"/><path d="M8 6l2 3M32 6l-2 3M5 16h3M32 16h3"/></svg>
+          <img class="redonda" src="../fotos/capilla-interior-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="">
           <span class="lat">Glorificar a Dios</span>
           <h3>Cristo en el centro</h3>
           <p>El movimiento quiere poner a Cristo en el centro de la vida rural, por la oración, la liturgia y los sacramentos, y ofrecer a Dios el trabajo de cada día.</p>
@@ -234,9 +232,9 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4vw,2.6re
           <p>Así queremos vivir nuestra pertenencia: recibir a las familias del movimiento que quieran conocer la vida en el campo, compartir lo que aprendemos en el huerto, con los animales y en el taller, y rezar y trabajar juntos en jornadas de oración y trabajo en común.</p>
       </div>
       <div class="trio">
-        <figure><img src="../fotos/paseo-burro-480.webp" srcset="../fotos/paseo-burro-480.webp 480w, ../fotos/paseo-burro-900.webp 900w" sizes="(max-width:600px) 46vw, 320px" width="900" height="900" loading="lazy" decoding="async" alt="Niños a lomos del burro en un rastrojo, acompañados por adultos"><figcaption>Paseo en burro con los más pequeños</figcaption></figure>
-        <figure><img src="../fotos/campana-480.webp" srcset="../fotos/campana-480.webp 480w, ../fotos/campana-900.webp 900w" sizes="(max-width:600px) 46vw, 320px" width="900" height="900" loading="lazy" decoding="async" alt="Campana montada en un yugo de madera con herrajes de hierro"><figcaption>Del taller: madera y hierro</figcaption></figure>
-        <figure><img src="../fotos/capilla-interior-480.webp" srcset="../fotos/capilla-interior-480.webp 480w, ../fotos/capilla-interior-900.webp 900w" sizes="(max-width:600px) 46vw, 320px" width="900" height="900" loading="lazy" decoding="async" alt="Interior sencillo de la capilla, con altar, crucifijo y dos imágenes; un hombre lee sentado en un banco"><figcaption>Oración y silencio en la ermita</figcaption></figure>
+        <figure><img src="../fotos/armonia-480.webp" srcset="../fotos/armonia-480.webp 480w, ../fotos/armonia-900.webp 900w" sizes="(max-width:600px) 46vw, 320px" width="900" height="900" loading="lazy" decoding="async" alt="Las cabras, encima del gran rumiante tumbado, junto a una oveja"><figcaption>Los pequeños, encima de los grandes</figcaption></figure>
+        <figure><img src="../fotos/huevos-480.webp" srcset="../fotos/huevos-480.webp 480w, ../fotos/huevos-900.webp 900w" sizes="(max-width:600px) 46vw, 320px" width="900" height="900" loading="lazy" decoding="async" alt="Huevos en una cesta de alambre con forma de gallina y calabacines del huerto"><figcaption>Huevos y calabacines del día</figcaption></figure>
+        <figure><img src="../fotos/capilla-perros-480.webp" srcset="../fotos/capilla-perros-480.webp 480w, ../fotos/capilla-perros-900.webp 900w" sizes="(max-width:600px) 46vw, 320px" width="900" height="900" loading="lazy" decoding="async" alt="Pequeña capilla blanca con espadaña y campana; delante, los perros descansan sobre unas balas de paja"><figcaption>La capilla, bajo la guardia de los perros</figcaption></figure>
       </div>
       <div class="acciones">
         <a class="boton" href="../#contacto">Escríbenos</a>
@@ -244,6 +242,7 @@ h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4vw,2.6re
       </div>
     </div>
   </section>
+  <p class="isidro gutter"><span>Patrón de los labradores</span>San Isidro Labrador, ruega por nosotros.</p>
 </main>
 
 <footer class="pie gutter">
